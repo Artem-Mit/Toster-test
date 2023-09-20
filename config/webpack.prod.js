@@ -18,12 +18,25 @@ module.exports = merge(common, {
       {
         test: /\.(sass|scss|css)$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+              sourceMap: false,
+              modules: false,
+            },
+          },
+          "postcss-loader",
+          {
+            loader: 'resolve-url-loader',
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            }
+          },
         ],
       },
     ],
@@ -31,7 +44,7 @@ module.exports = merge(common, {
   plugins: [
     // Extracts CSS into separate files
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css',
+      filename: '[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
   ],
