@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body>
+  <div class='page'>
+    <header class="header">
+      <p class="header__banner">
+        &#127487;&#127462; SPECIAL OFFER + FREE DELIVERY 2-4 DAYS IN SA &#127487;&#127462;
+      </p>
+      <img src="<%=require('./images/logo.png')%>" alt="logo" class="header__logo">
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__offer">
+          <p class="hero__offer-text">Limited offer</p>
+          <span class="hero__offer-timer"></span>
+        </div>
+        <div class="hero__sale">
+          <p class="hero__old-price">R 250</p>
+          <p class="hero__new-price">R 160</p>
+        </div>
+      </section>
+      <section class="product">
+        <div class="product__reviews-container">
+          <p class="product__reviews-rating">Excellent 4.8/5</p>
+          <img src="<%=require('./images/rewiewsIcon.svg')%>" alt="rewiews-logo" class="product__reviews-logo">
+          <p class="product__reviews-tag">best selling</p>
+        </div>
+        <h1 class="product__title">Orthopedic Slippers</h1>
+        <div class="product__photo-galery">
+          <img src="<%=require('./images/black.png')%>" alt="photo" class="product__photo-big">
+          <div class="product__previews-container">
+            <img src="<%=require('./images/black.png')%>" alt="photo" class="product__photo-prewiew">
+            <img src="<%=require('./images/orange.png')%>" alt="photo" class="product__photo-prewiew">
+            <img src="<%=require('./images/pink.png')%>" alt="photo" class="product__photo-prewiew">
+            <img src="<%=require('./images/yellow.png')%>" alt="photo" class="product__photo-prewiew">
+          </div>
+        </div>
+        <div class="product__shipping">
+          <p class="product__fast-delivery"><span class="product__bold-text">Fast Delivery: </span>2-4 days from SA 🇿🇦
+          </p>
+          <p class="product__in-stock"><span class="product__bold-text">In Stock: </span>Shipping from Johannesburg 🇿🇦
+          </p>
+          <div class="product__rating">
+            <span class="product__shipping-rating">
+              <img src="<%=require('./images/star.svg')%>" alt="star">
+              <img src="<%=require('./images/star.svg')%>" alt="star">
+              <img src="<%=require('./images/star.svg')%>" alt="star">
+              <img src="<%=require('./images/star.svg')%>" alt="star">
+              <img src="<%=require('./images/star.svg')%>" alt="star">
+              <span class="product__shipping-rating-text">(10)</span>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section class="order">
+        <form action="https://youtube.com" name="order" class="order__form" method="get" target="_blank">
+          <fieldset class="order__fieldset">
+            <div class="order__selector-container">
+              <span class="order__text">color</span>
+              <select name="order__color-selector" form="order" class="order__selector">
+                <option value="black">Black</option>
+                <option value="orange">Orange</option>
+                <option value="Pink">Pink</option>
+                <option value="Yellow">Yellow</option>
+              </select>
+            </div>
+            <div class="order__selector-container">
+              <span class="order__text">size</span>
+              <select name="order__size-selector" form="order" class="order__selector">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </fieldset>
+          <button type="submit" class="order__button">BUY NOW</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

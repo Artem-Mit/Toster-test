@@ -1,0 +1,24 @@
+@use '../fonts/gothampro.scss';
+@use './normalize.css';
+
+// Стили контейнера
+@use './page.scss';
+// Стили хедэра
+@use './header.scss';
+// Стили hero
+@use './hero.scss';
+// Стили product
+@use './product.scss';
+// Стили формы
+@use './order.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'GothamPro', Helvetica, sans-serif;
+  font-weight: 400;
+  background-color: #F0F0F0;
+}
+
